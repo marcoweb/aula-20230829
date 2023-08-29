@@ -7,7 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Aplicação</title>
     </head>
-    <body>
+    <body> 
+        <!-- Comentário -->
         <h1>Olá Mundo!!!</h1>
+        <h1>Ol&aacute; Mundo</h1>
+
+        <!-- Scriptlet-->
+
+        <%
+            String nome = request.getParameter("nome");
+            out.print("Olá " + nome);
+        %>
     </body>
 </html>
