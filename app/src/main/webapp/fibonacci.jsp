@@ -1,9 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"  %>
 <%@ taglib uri="jakarta.tags.core" prefix="c"  %>
 <%
-    int[] resultado = new int[10];
+    int[] resultado = new int[20];
     resultado[0] = 1;
     resultado[1] = 1;
+
+    for(int pos = 2;pos < resultado.length;pos++) {
+        resultado[pos] = resultado[pos-1] + resultado[pos-2];
+    }
 
     request.setAttribute("resultado", resultado);
 %>
